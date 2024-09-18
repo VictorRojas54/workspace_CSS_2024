@@ -1,0 +1,40 @@
+/* style file created by Victor Rojas
+======================================
+00: css variable
+01: color
+02: typography
+
+======================================
+*/
+
+/* 00 css variable */
+:root{
+    --body-color: hsla(359,39%,35%,0.8);
+    --page-color: hsla(225, 15%, 95%, 0.9);
+    --sidebar-color: hsla(39, 100%, 67%, 0.856);
+    /** font color **/
+    --font-color: rgb(13, 58, 190);
+    /** h1 color -- practice **/
+    --h1-color:rgb(132, 0, 255);
+
+}
+
+/* 01 Color */
+body{
+    background-color: var(--body-color);
+}
+#zen-intro{
+    background-color: var(--page-color);
+    color: var(--font-color)
+}
+#zen-supporting{
+    background-color: var(--page-color);
+    color: var(--font-color)
+}
+.sidebar{
+    background-color: var(--sidebar-color);
+    color: var(--font-color)
+}
+h1{
+    /*finish later*/
+}
