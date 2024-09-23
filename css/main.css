@@ -10,12 +10,17 @@
 /* 00 css variable */
 :root{
     --body-color: hsla(359,39%,35%,0.8);
-    --page-color: hsla(225, 15%, 95%, 0.9);
+    --page-color: hsla(225, 69%, 72%, 0.9);
     --sidebar-color: hsla(39, 100%, 67%, 0.856);
     /** font color **/
     --font-color: rgb(13, 58, 190);
     /** h1 color -- practice **/
     --h1-color:rgb(132, 0, 255);
+    /** layout variables **/
+    --page-top-position: 85%;
+    --page-width: 30%;
+    --bottom-bar-height: 15vh;
+    --bottom-bar-color: hsla(227, 62%, 64%, 0.9);
 
 }
 
@@ -36,5 +41,56 @@ body{
     color: var(--font-color)
 }
 h1{
-    /*finish later*/
+    color: var(--h1-color);
+}
+
+/*02 Layout */
+div.explanation, div.requirements, div.benefits, div.participation{
+    position: fixed;
+    width: var(--page-width);
+    top: var(--page-top-position);
+    background-image: url(../img/newspaper3.jpg);
+}
+
+div.explanation{
+    left:0%;
+}
+
+div.requirements{
+    left:30%;
+}
+
+div.benefits{
+    left:60%;
+}
+
+div.participation{
+    left:90%;
+}
+
+aside.sidebar{
+    position: absolute;
+    top:20%;
+    right: 0;
+    /* bottom: 0; */
+    /*adjust width/height */
+}
+
+section.intro{
+    position:fixed;
+    bottom: 5%;
+    left: 30%;
+    width: 30%;
+    height: 80%;
+    background-image:url(../img/newspaper1.jpg);
+}
+
+div.extra2{
+    position:fixed;
+    bottom:0;
+    left:0;
+    /* right:0; can do this or width 100%*/
+    width:100%;
+    height:var(--bottom-bar-height);
+    background-color: var(--bottom-bar-color);
 }
