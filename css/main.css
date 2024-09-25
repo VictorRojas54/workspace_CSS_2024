@@ -13,14 +13,14 @@
     --page-color: hsla(225, 69%, 72%, 0.9);
     --sidebar-color: hsla(39, 100%, 67%, 0.856);
     /** font color **/
-    --font-color: rgb(13, 58, 190);
+    --font-color: rgb(231, 142, 26);
     /** h1 color -- practice **/
     --h1-color:rgb(132, 0, 255);
     /** layout variables **/
     --page-top-position: 85%;
     --page-width: 30%;
     --bottom-bar-height: 15vh;
-    --bottom-bar-color: hsla(227, 62%, 64%, 0.9);
+    --bottom-bar-color: rgb(230, 140, 20);
 
 }
 
@@ -83,6 +83,10 @@ section.intro{
     width: 30%;
     height: 80%;
     background-image:url(../img/newspaper1.jpg);
+    padding: 2%;
+    border: 2px dashed rgb(39, 34, 34);
+    margin-left: 100px;
+    text-indent: 1px; /* -9999px can remove content away*/
 }
 
 div.extra2{
@@ -93,4 +97,63 @@ div.extra2{
     width:100%;
     height:var(--bottom-bar-height);
     background-color: var(--bottom-bar-color);
+}
+
+div.extra1{
+    position: fixed;
+    bottom: 5%;
+    left:20%;
+    width: 30%;
+    height:80%;
+    background-image: url(../img/newspaper2.jpg);
+    z-index: -1;
+}
+
+/* create tab for the folder*/
+div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
+    margin-top: -4%;
+    width: 12vw;
+    background-color: bisque;
+}
+
+/**03: Typography **/
+@font-face{
+    font-family: 'myfont';
+    src: url(../fonts/chunkfive.eot);
+}
+
+header h1{
+    font-family: 'myfont', sans-serif;
+    font-weight: 100;
+    font-size: 1.25em;
+    letter-spacing: normal;
+    line-height: 1em;
+    
+}
+
+header h2{
+    font-family:'Anton SC', system-ui;
+    font-weight:100;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+#design-selection h3{
+    visibility: hidden;
+}
+/*hide the archive section/ resource section*/
+
+#design-archives {
+    display: none;
+}
+
+#zen-resources {
+    display: none;
 }
