@@ -57,15 +57,15 @@ div.explanation{
 }
 
 div.requirements{
-    left:30%;
+    left:20%;
 }
 
 div.benefits{
-    left:60%;
+    left:40%;
 }
 
 div.participation{
-    left:90%;
+    left:60%;
 }
 
 aside.sidebar{
@@ -156,4 +156,49 @@ li{
 
 #zen-resources {
     display: none;
+}
+
+/* 04, selector practice, transfom, transition, .... */
+a:hover{
+    font-size: 1.5em;
+}
+
+div.explanation:hover{
+    top:15vh;
+    height:90vh;
+}
+
+div.participation:hover{
+    top:15vh;
+    height:90vh;
+}
+
+div.benefits:hover{
+    top:15vh;
+    height:90vh;
+}
+
+div.requirements:hover{
+    top:15vh;
+    height:90vh;
+}
+
+p::first-letter{
+    font-size:1.5em;
+    font-style: italic;
+}
+
+p:nth-child(2n+1){
+    color:white;
+    background-color: black;
+}
+
+/* text-shadow */
+h3{text-shadow: 2px 2px 3px black;
+}
+
+/* border-radius for the tabs*/
+div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3, div.explanation, div.requirements, div.benefits, div.participation {
+    border-radius: 10% / 50%;
+    padding-left: 5px;
 }
