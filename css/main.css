@@ -50,6 +50,8 @@ div.explanation, div.requirements, div.benefits, div.participation{
     width: var(--page-width);
     top: var(--page-top-position);
     background-image: url(../img/newspaper3.jpg);
+    /* transiton 4s ease-in-out */
+    transition: all 4s ease-in-out;
 }
 
 div.explanation{
@@ -87,6 +89,7 @@ section.intro{
     border: 2px dashed rgb(39, 34, 34);
     margin-left: 100px;
     text-indent: 1px; /* -9999px can remove content away*/
+    transform: rotate(-10deg)translate(-100px,0);
 }
 
 div.extra2{
@@ -107,6 +110,7 @@ div.extra1{
     height:80%;
     background-image: url(../img/newspaper2.jpg);
     z-index: -1;
+    transform: rotate(15deg)translate(200px,100px);
 }
 
 /* create tab for the folder*/
@@ -201,4 +205,44 @@ h3{text-shadow: 2px 2px 3px black;
 div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3, div.explanation, div.requirements, div.benefits, div.participation {
     border-radius: 10% / 50%;
     padding-left: 5px;
+}
+
+/** list style image **/
+ul{
+    list-style-image: url(../img/star.png);
+}
+
+/** transform and transition **/
+section.intro h3 ~p{
+    opacity: 1;
+    transition: all 2s ease-in-out;
+}
+
+section.intro h3:hover ~p{
+    transform: scale(0.2);
+    opacity: 0;
+}
+
+/** play with numbers **/
+@keyframes backandfourth{
+    from{transform: translate(-500px,0);}
+    30%{transform: translate(-300px,0);}
+    50%{transform: translate(600px,0);}
+    70%{transform: translate(700px,0);}
+    90%{transform: translate(900px,0);}
+}
+
+footer{ 
+    position:fixed;
+    bottom: 11vh;
+    left: 50%;
+    z-index: 4;
+    animation: 10s ease-in-out 2s alternate infinite backandfourth;
+}
+
+/* fun features */
+
+
+aside.sidebar{
+    clip-path: polygon(0 0,0 60%, 50% 90%, 100% 60%, 100% 0)
 }
